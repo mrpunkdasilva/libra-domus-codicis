@@ -234,10 +234,10 @@ The files in this repository are for personal, educational use only. All copyrig
 | [DEVOPS NA PRATICA ENTREGA DE SOFTWARE CONFIAVEL E AUTOMATIZADA](./technology/devops/DEVOPS_NA_PRATICA_ENTREGA_DE_SOFTWARE_CONFIAVEL_E_AUTOMATIZADA.pdf) |  |  |  |
 | [DEVOPS PUPPET DOCKER AND KUBERNETES](./technology/devops/DEVOPS_PUPPET_DOCKER_AND_KUBERNETES.pdf) |  |  |  |
 | [DEVOPS WITH KUBERNETES](./technology/devops/DEVOPS_WITH_KUBERNETES.pdf) |  |  |  |
-| [DIABLO MANUAL DE](./Diablo/DIABLO_MANUAL_DE.pdf) |  |  |  |
-| [DIABLO MANUAL FR](./Diablo/DIABLO_MANUAL_FR.pdf) |  |  |  |
-| [DIABLO MANUAL IT](./Diablo/DIABLO_MANUAL_IT.pdf) |  |  |  |
-| [DIABLO MANUAL](./Diablo/DIABLO_MANUAL.pdf) |  |  |  |
+| [DIABLO MANUAL DE](fiction_and_literature/diablo/DIABLO_MANUAL_DE.pdf) |  |  |  |
+| [DIABLO MANUAL FR](fiction_and_literature/diablo/DIABLO_MANUAL_FR.pdf) |  |  |  |
+| [DIABLO MANUAL IT](fiction_and_literature/diablo/DIABLO_MANUAL_IT.pdf) |  |  |  |
+| [DIABLO MANUAL](fiction_and_literature/diablo/DIABLO_MANUAL.pdf) |  |  |  |
 | [DOCKER CONTAINERS BUILD AND DEPLOY WITH KUBERNETES FLANNEL COCKPIT AND ATOMIC](./technology/docker/DOCKER_CONTAINERS_BUILD_AND_DEPLOY_WITH_KUBERNETES_FLANNEL_COCKPIT_AND_ATOMIC.pdf) |  |  |  |
 | [DOCKER COOKBOOK SOLUTIONS AND EXAMPLES FOR BUILDING DISTRIBUTED APPLICATIONS](./technology/docker/DOCKER_COOKBOOK_SOLUTIONS_AND_EXAMPLES_FOR_BUILDING_DISTRIBUTED_APPLICATIONS.pdf) |  |  |  |
 | [DOCKER FOR DATA SCIENCE](./technology/docker/DOCKER_FOR_DATA_SCIENCE.pdf) |  |  |  |
