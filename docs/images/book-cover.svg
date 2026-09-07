@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="280" viewBox="0 0 200 280">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001a1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#003333;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#001a1a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#008080;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="280" fill="url(#bg)" rx="5"/>
+  
+  <!-- Border -->
+  <rect x="5" y="5" width="190" height="270" fill="none" stroke="url(#border)" stroke-width="2" rx="3"/>
+  
+  <!-- Inner lines -->
+  <line x1="20" y1="40" x2="180" y2="40" stroke="#00ffff" stroke-width="0.5" opacity="0.3"/>
+  <line x1="20" y1="240" x2="180" y2="240" stroke="#00ffff" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- Book icon -->
+  <g transform="translate(100, 120)" filter="url(#glow)">
+    <rect x="-25" y="-35" width="50" height="70" fill="none" stroke="#00ffff" stroke-width="2"/>
+    <line x1="-20" y1="-25" x2="20" y2="-25" stroke="#00ffff" stroke-width="1" opacity="0.5"/>
+    <line x1="-20" y1="-15" x2="15" y2="-15" stroke="#00ffff" stroke-width="1" opacity="0.5"/>
+    <line x1="-20" y1="-5" x2="20" y2="-5" stroke="#00ffff" stroke-width="1" opacity="0.5"/>
+    <line x1="-20" y1="5" x2="10" y2="5" stroke="#00ffff" stroke-width="1" opacity="0.5"/>
+    <line x1="-20" y1="15" x2="18" y2="15" stroke="#00ffff" stroke-width="1" opacity="0.5"/>
+  </g>
+  
+  <!-- Corner decorations -->
+  <circle cx="15" cy="15" r="3" fill="#00ffff" opacity="0.5"/>
+  <circle cx="185" cy="15" r="3" fill="#00ffff" opacity="0.5"/>
+  <circle cx="15" cy="265" r="3" fill="#00ffff" opacity="0.5"/>
+  <circle cx="185" cy="265" r="3" fill="#00ffff" opacity="0.5"/>
+  
+  <!-- Stars -->
+  <circle cx="30" cy="50" r="1" fill="#00ffff" opacity="0.8"/>
+  <circle cx="170" cy="60" r="1" fill="#00ffff" opacity="0.6"/>
+  <circle cx="45" cy="220" r="1" fill="#00ffff" opacity="0.7"/>
+  <circle cx="155" y="230" r="1" fill="#00ffff" opacity="0.5"/>
+</svg>

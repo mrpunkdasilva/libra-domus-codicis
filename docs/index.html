@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libraria Domus Codicis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix-canvas"></canvas>
+  <div class="container">
+    <header>
+      <h1>LIBRARIA DOMUS CODICIS</h1>
+    </header>
+
+    <div class="marquee-container">
+      <div class="marquee-text">
+        [SISTEMA ONLINE] ACESSO LIBERADO - CENTENAS DE LIVROS DISPONIVEIS - ATUALIZADO EM TEMPO REAL - SEJA BEM-VINDO AO SISTEMA...
+      </div>
+    </div>
+
+    <div class="deco-line"></div>
+
+    <div class="search-box">
+      <input type="text" id="search" placeholder="[ DIGITE SUA BUSCA ]" />
+    </div>
+
+    <div id="stats"></div>
+
+    <div id="categories"></div>
+
+    <div id="books"></div>
+
+    <div class="deco-line"></div>
+
+    <div class="webring" id="webring">
+      <p>[ WEBRING ]</p>
+      <a href="#" id="btn-prev">&lt;&lt; ANTERIOR</a>
+      <a href="#" id="btn-random">ALEATORIO</a>
+      <a href="#" id="btn-next">PROXIMO &gt;&gt;</a>
+    </div>
+
+    <footer>
+      <div class="visitor-counter">
+        [ VISITANTES: <span id="counter">001337</span> ]
+      </div>
+      <p class="footer-text">
+        LIBRARIA DOMUS CODICIS // 2026
+      </p>
+      <p class="footer-text">
+        SISTEMA OPERACIONAL: DESCONHECIDO
+      </p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
