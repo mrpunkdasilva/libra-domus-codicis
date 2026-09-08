@@ -70,6 +70,27 @@ header h1 {
   letter-spacing: 5px;
 }
 
+.header-nav {
+  margin-top: 15px;
+}
+
+.header-nav-link {
+  display: inline-block;
+  padding: 8px 20px;
+  background: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+
+.header-nav-link:hover {
+  background: #00ffff;
+  color: #000000;
+}
+
 .back-button {
   margin-bottom: 20px;
 }
@@ -566,6 +587,365 @@ footer {
 
 .book-details-link:hover {
   background: #00cccc;
+}
+
+.book-details-meta {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.book-details-format {
+  display: inline-block;
+  padding: 2px 8px;
+  background: #00ffff;
+  color: #000000;
+  font-weight: bold;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin-right: 10px;
+}
+
+.book-details-filename {
+  color: #00cccc;
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+.book-details-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* PDF VIEWER */
+.pdf-viewer {
+  background: #001212;
+  border: 1px solid #00ffff;
+  margin-top: 15px;
+  animation: fade-in 0.5s ease-out;
+}
+
+.pdf-viewer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: #001a1a;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pdf-viewer-title {
+  color: #00cccc;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  word-break: break-all;
+  flex: 1;
+}
+
+.pdf-btn {
+  padding: 5px 12px;
+  border: 1px solid #00ffff;
+  background: #001515;
+  color: #00ffff;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.pdf-btn:hover {
+  background: #00ffff;
+  color: #000000;
+}
+
+@media (max-width: 600px) {
+  .book-details-actions {
+    flex-direction: column;
+  }
+  
+  .book-details-actions a {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .pdf-viewer-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* EXPLORER PAGE */
+.explorer-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.explorer-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: #00ffff;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+.explorer-subtitle {
+  color: #00cccc;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.explorer-container {
+  display: flex;
+  gap: 15px;
+  background: #001212;
+  border: 1px solid #00ffff;
+  min-height: 500px;
+}
+
+.explorer-sidebar {
+  width: 280px;
+  border-right: 1px solid #00ffff;
+  flex-shrink: 0;
+  overflow-y: auto;
+  max-height: 600px;
+}
+
+.explorer-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: #001a1a;
+  border-bottom: 1px solid #00ffff;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #00ffff;
+}
+
+.explorer-btn-small {
+  padding: 3px 8px;
+  border: 1px solid #00ffff;
+  background: #001515;
+  color: #00ffff;
+  cursor: pointer;
+  font-size: 0.65rem;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.explorer-btn-small:hover {
+  background: #00ffff;
+  color: #000000;
+}
+
+.folder-tree {
+  padding: 10px 0;
+}
+
+.tree-folder {
+  display: flex;
+  align-items: center;
+  padding: 6px 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-wrap: wrap;
+}
+
+.tree-folder:hover {
+  background: #001a1a;
+}
+
+.tree-folder.active {
+  background: #002020;
+  border-left: 3px solid #00ffff;
+}
+
+.tree-toggle {
+  width: 15px;
+  font-size: 0.7rem;
+  color: #00ffff;
+  flex-shrink: 0;
+}
+
+.tree-icon {
+  margin-right: 8px;
+  font-size: 0.9rem;
+}
+
+.tree-name {
+  color: #00ffff;
+  font-size: 0.85rem;
+  flex: 1;
+}
+
+.tree-count {
+  color: #008080;
+  font-size: 0.75rem;
+  margin-left: 5px;
+}
+
+.tree-children {
+  display: none;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.tree-folder.expanded > .tree-children {
+  display: block;
+}
+
+.tree-folder.expanded > .tree-toggle {
+  transform: rotate(90deg);
+}
+
+.explorer-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.explorer-path {
+  padding: 10px 15px;
+  background: #001a1a;
+  border-bottom: 1px solid #00ffff;
+  font-size: 0.85rem;
+}
+
+.path-label {
+  color: #008080;
+  margin-right: 8px;
+  letter-spacing: 1px;
+}
+
+.path-value {
+  color: #00ffff;
+  word-break: break-all;
+}
+
+.folder-contents {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.contents-section {
+  margin-bottom: 20px;
+}
+
+.contents-section-title {
+  color: #008080;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #003333;
+}
+
+.contents-folder {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  background: #001515;
+  border: 1px solid #003333;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.contents-folder:hover {
+  border-color: #00ffff;
+  background: #001a1a;
+  transform: translateX(3px);
+}
+
+.contents-folder-icon {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.contents-folder-name {
+  color: #00ffff;
+  font-size: 0.95rem;
+}
+
+.contents-book {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  background: #000d0d;
+  border: 1px solid #003333;
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.contents-book:hover {
+  border-color: #00ffff;
+  background: #001515;
+  transform: translateX(3px);
+}
+
+.contents-book-icon {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.contents-book-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.contents-book-title {
+  color: #00ffff;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.contents-book-ext {
+  color: #008080;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+.skeleton-tree {
+  padding: 15px;
+}
+
+.skeleton-tree-item {
+  height: 25px;
+  margin-bottom: 8px;
+  border-radius: 3px;
+}
+
+.skeleton-contents {
+  padding: 15px;
+}
+
+.skeleton-content-item {
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .explorer-container {
+    flex-direction: column;
+  }
+  
+  .explorer-sidebar {
+    width: 100%;
+    max-height: 250px;
+    border-right: none;
+    border-bottom: 1px solid #00ffff;
+  }
+  
+  .tree-children {
+    padding-left: 10px;
+  }
 }
 
 /* RECOMMENDATIONS */

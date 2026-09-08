@@ -82,6 +82,8 @@ function renderBookDetails(book) {
   const githubBase = 'https://github.com/mrpunkdasilva/libra-domus-codicis/blob/main/';
   const githubUrl = githubBase + book.path;
   
+  const fileExt = book.name.split('.').pop().toLowerCase();
+  
   detailsEl.innerHTML = `
     <div class="book-details-cover">
       <img src="images/book-cover.svg" alt="Capa"/>
@@ -89,7 +91,10 @@ function renderBookDetails(book) {
     <div class="book-details-info">
       <div class="book-details-category">${book.category || 'Sem categoria'}</div>
       <div class="book-details-title">${book.title_clean || book.name || 'Sem titulo'}</div>
-      <a href="${githubUrl}" target="_blank" class="book-details-link">ABRIR LIVRO</a>
+      <div class="book-details-meta">
+        <span class="book-details-format">${fileExt.toUpperCase()}</span>
+      </div>
+      <a href="${githubUrl}" target="_blank" class="book-details-link">ABRIR NO GITHUB</a>
     </div>
   `;
 }

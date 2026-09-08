@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorar - Libraria Domus Codicis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix-canvas"></canvas>
+  <div class="container">
+    <header>
+      <a href="index.html" style="text-decoration: none;">
+        <h1>LIBRARIA DOMUS CODICIS</h1>
+      </a>
+    </header>
+
+    <div class="back-button">
+      <a href="index.html" class="back-link">&lt;&lt; VOLTAR</a>
+    </div>
+
+    <div class="explorer-section">
+      <h2 class="explorer-title">EXPLORAR BIBLIOTECA</h2>
+      <p class="explorer-subtitle">Navegue pela estrutura de pastas da colecao</p>
+    </div>
+
+    <div class="explorer-container">
+      <div class="explorer-sidebar">
+        <div class="explorer-sidebar-header">
+          <span>DIRETORIOS</span>
+          <button id="btn-expand-all" class="explorer-btn-small">EXPANDIR TUDO</button>
+        </div>
+        <div id="folder-tree" class="folder-tree">
+          <div class="skeleton-tree">
+            <div class="skeleton-tree-item skeleton"></div>
+            <div class="skeleton-tree-item skeleton"></div>
+            <div class="skeleton-tree-item skeleton"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="explorer-main">
+        <div class="explorer-path" id="current-path">
+          <span class="path-label">CAMINHO:</span>
+          <span class="path-value">libraria/</span>
+        </div>
+        <div id="folder-contents" class="folder-contents">
+          <div class="skeleton-contents">
+            <div class="skeleton-content-item skeleton"></div>
+            <div class="skeleton-content-item skeleton"></div>
+            <div class="skeleton-content-item skeleton"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="deco-line"></div>
+
+    <footer>
+      <p class="footer-text">
+        LIBRARIA DOMUS CODICIS // 2026
+      </p>
+    </footer>
+  </div>
+
+  <script src="explorer.js"></script>
+</body>
+</html>
