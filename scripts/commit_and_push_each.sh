@@ -9,14 +9,16 @@ PROJECT_ROOT="$SCRIPT_DIR/.."
 # Muda para o diretório raiz do projeto antes de executar qualquer coisa
 cd "$PROJECT_ROOT" || exit
 
-echo "Buscando por arquivos novos ou modificados (PDFs, e-books, dados, docs, scripts)..."
+echo "Buscando por arquivos novos ou modificados..."
 
-# Lista de extensões de arquivos suportadas
-EXTENSIONS=('*.pdf' '*.epub' '*.mobi' '*.json' '*.md' '*.py' '*.sh' '*.svg')
-
-# Usa git ls-files com as extensões listadas acima
+# Usa git ls-files para todos os arquivos
 # Obtém uma lista terminada em NUL (-z) para lidar corretamente com caminhos que possuem espaços
-git ls-files --modified --others --exclude-standard -z "${EXTENSIONS[@]}" | while IFS= read -r -d '' file; do
+git ls-files --modified --others --exclude-standard -z | while IFS= read -r -d '' file; do
+  # Pula diretorios
+  if [ -d "$file" ]; then
+    continue
+  fi
+
   echo "---------------------------------"
   echo "Processando arquivo: $file"
 
@@ -38,8 +40,8 @@ git ls-files --modified --others --exclude-standard -z "${EXTENSIONS[@]}" | whil
 done
 
 # Verifica se algum arquivo correspondente foi encontrado para dar um feedback limpo
-if ! git ls-files --modified --others --exclude-standard "${EXTENSIONS[@]}" | read -r; then
-    echo "Nenhum arquivo novo ou modificado com as extensões suportadas foi encontrado."
+if ! git ls-files --modified --others --exclude-standard | read -r; then
+    echo "Nenhum arquivo novo ou modificado foi encontrado."
 fi
 
 echo "---------------------------------"
